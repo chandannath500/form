@@ -232,22 +232,17 @@ const FormPage = () => {
           ownershipChange2022: ownershipChange2022Value,
           shareholdingPattern: [],
         }}>
-         <Email/>
-        <Returns fileReturnsLastYearValue={fileReturnsLastYearValue} handleFileReturnsLastYearChange={handleFileReturnsLastYearChange} form={form}/>
-        <Incorporated
-  incorporated2022Value={incorporated2022Value}
-  handleIncorporated2022Change={handleIncorporated2022Change}
-  form={form}
-/>
-<Ownership ownershipChange2022Value={ownershipChange2022Value} handleOwnershipChange2022Change={handleOwnershipChange2022Change}
-form ={form }/>
-          <Transactions form={form}/>
-<MultipleDocs form={form}/>
-          
-
-
-
-
+          <Email />
+          <Returns fileReturnsLastYearValue={fileReturnsLastYearValue} handleFileReturnsLastYearChange={handleFileReturnsLastYearChange} form={form} />
+          <Incorporated
+            incorporated2022Value={incorporated2022Value}
+            handleIncorporated2022Change={handleIncorporated2022Change}
+            form={form}
+          />
+          <Ownership ownershipChange2022Value={ownershipChange2022Value} handleOwnershipChange2022Change={handleOwnershipChange2022Change}
+            form={form} />
+          <Transactions form={form} />
+          <MultipleDocs form={form} />
 
           <span>Please complete the payment. We will prepare the draft tax return within 48 hours!</span>
           <div>
