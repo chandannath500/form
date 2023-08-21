@@ -4,11 +4,12 @@ import Upload from './Upload';
 
 const Transactions = ({form}) => {
   return (
-    <div>
-      
+    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>      
       <Form.Item
             label="Was there any following transaction in 2022?"
             name="transaction"
+            labelCol={{ span: 24 }}
             rules={[
               ({ getFieldValue }) => ({
                 validator(_, value) {
@@ -26,7 +27,9 @@ const Transactions = ({form}) => {
               <Checkbox value="Transaction">Related Party Transaction</Checkbox>
             </Checkbox.Group>
           </Form.Item>
-          <Form.Item label="Upload documents for the same" name="transactionDocs">
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Form.Item label="Upload documents for the same" labelCol={{ span: 24 }} name="transactionDocs">
             <Upload
               main={"Browse Files"}
               sub={"Drag and drop files here"}
@@ -34,6 +37,7 @@ const Transactions = ({form}) => {
             />
           </Form.Item>
     </div>
+    </>
   )
 }
 
