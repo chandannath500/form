@@ -8,6 +8,12 @@ const Incorporated = ({ incorporated2022Value, handleIncorporated2022Change, for
       <Form.Item
         label="Was the S-Corp incorporated in 2022?"
         name="incorporated2022"
+        rules={[
+            {
+              required: true,
+              message: 'Please select an option',
+            },
+          ]}
       >
         <Radio.Group
           className="vertical-radio-group"
