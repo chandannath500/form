@@ -4,10 +4,12 @@ import Upload from './Upload';
 
 const Ownership = ({ownershipChange2022Value,handleOwnershipChange2022Change,form }) => {
   return (
-    <div>
+    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Form.Item
             label="Was there any change in Ownership Structure in 2022?"
             name="ownershipChange2022"
+            labelCol={{ span: 24 }}
                rules={[
             {
               required: true,
@@ -22,8 +24,9 @@ const Ownership = ({ownershipChange2022Value,handleOwnershipChange2022Change,for
               <Radio value="no">No</Radio>
             </Radio.Group>
           </Form.Item>
-
-          <Form.Item label="Upload latest Shareholding pattern" name="shareholdingPattern">
+</div>
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Form.Item label="Upload latest Shareholding pattern" labelCol={{ span: 24 }} name="shareholdingPattern">
             <Upload
               main={"Browse Files"}
               sub={"Drag and drop files here"}
@@ -32,6 +35,7 @@ const Ownership = ({ownershipChange2022Value,handleOwnershipChange2022Change,for
             />
           </Form.Item>
     </div>
+    </>
   )
 }
 
