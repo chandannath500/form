@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Form, Input, Button, Radio, Table } from 'antd';
 import Upload from './Upload';
 import { Checkbox } from 'antd';
-import logo from './logo.jpeg'; 
+import logo from './logo.jpg'; 
 
 const FormPage = () => {
   const [formVisible, setFormVisible] = useState(false);
