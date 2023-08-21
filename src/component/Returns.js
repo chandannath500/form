@@ -9,6 +9,12 @@ const Returns = ({fileReturnsLastYearValue,handleFileReturnsLastYearChange,form}
       <Form.Item
             label="Did you file the returns last year?"
             name="fileReturnsLastYear"
+            rules={[
+                {
+                  required: true,
+                  message: 'Please select an option',
+                },
+              ]}
           >
             <Radio.Group
               className="vertical-radio-group"
