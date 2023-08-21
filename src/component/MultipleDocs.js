@@ -4,11 +4,12 @@ import Upload from './Upload';
 
 const MultipleDocs = ({form}) => {
   return (
-    <div>
-      
+    <>
+       <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Form.Item
             label="Please upload the following documents"
             name="multiType"
+            labelCol={{ span: 24 }}
             rules={[
               ({ getFieldValue }) => ({
                 validator(_, value) {
@@ -30,14 +31,21 @@ const MultipleDocs = ({form}) => {
               <Checkbox value="Financials">Financials(if prepared).</Checkbox>
             </Checkbox.Group>
           </Form.Item>
-          <Form.Item label="Upload documents for the same" name="multiDocs">
-            <Upload
-              main={"Browse Files"}
-              sub={"Drag and drop files here"}
-              onFileUpload={(fileList) => form.setFieldsValue({ multiDocs: fileList })}
-            />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Form.Item label="Upload documents for the same" labelCol={{ span: 24 }} name="multiDocs">
+          <Upload
+    main={"Browse Files"}
+    sub={"Drag and drop files here"}
+    onFileUpload={(fileList) => {
+      form.setFieldsValue({
+        multiDocs: fileList.map(file => ({ filename: file.name }))
+      });
+    }}
+  />
           </Form.Item>
-    </div>
+          </div>
+    </>
   )
 }
 
