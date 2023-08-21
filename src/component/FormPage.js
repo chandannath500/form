@@ -208,7 +208,7 @@ const FormPage = () => {
           <Button type="primary" onClick={showModal}>
             Create Another Form
           </Button>
-          <Table columns={columns} dataSource={combinedData} bordered />
+          <Table columns={columns} dataSource={combinedData} bordered style={{ marginTop: '20px' }}  />
         </div>
       ) : (
         <Button type="primary" onClick={showModal}>
