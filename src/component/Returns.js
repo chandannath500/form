@@ -4,11 +4,13 @@ import Upload from './Upload';
 
 const Returns = ({fileReturnsLastYearValue,handleFileReturnsLastYearChange,form}) => {
   return (
-    <div>    
+    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
 
       <Form.Item
             label="Did you file the returns last year?"
             name="fileReturnsLastYear"
+            labelCol={{ span: 24 }}
             rules={[
                 {
                   required: true,
@@ -25,8 +27,9 @@ const Returns = ({fileReturnsLastYearValue,handleFileReturnsLastYearChange,form}
               <Radio value="no">No</Radio>
             </Radio.Group>
           </Form.Item>
-
-          <Form.Item label="File Upload" name="returnDocuments">
+</div>
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+          <Form.Item label="File Upload"  labelCol={{ span: 24 }} name="returnDocuments">
             <Upload
               main={"Browse Files"}
               sub={"Drag and drop files here"}
@@ -35,6 +38,7 @@ const Returns = ({fileReturnsLastYearValue,handleFileReturnsLastYearChange,form}
             />
           </Form.Item>
     </div>
+    </>
   )
 }
 
