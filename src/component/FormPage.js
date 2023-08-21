@@ -100,8 +100,9 @@ const FormPage = () => {
       title: 'File Returns Last Year',
       dataIndex: 'fileReturnsLastYear',
       key: 'fileReturnsLastYear',
-      render: (value) => <span>{value ? 'Yes' : 'No'}</span>,
+      render: (value) => <span>{value}</span>,
     },
+    
     {
       title: 'Return Documents',
       dataIndex: 'returnDocuments',
@@ -118,9 +119,9 @@ const FormPage = () => {
       title: 'Was the S-Corp incorporated in 2022?',
       dataIndex: 'incorporated2022',
       key: 'incorporated2022',
-      render: (value) => <span>{value ? 'Yes' : 'No'}</span>,
+      render: (value) => <span>{value}</span>,
     },
-
+    
     {
       title: 'Incorporation Documents',
       dataIndex: 'incorporationDocuments',
@@ -137,8 +138,9 @@ const FormPage = () => {
       title: 'Change in Ownership Structure in 2022',
       dataIndex: 'ownershipChange2022',
       key: 'ownershipChange2022',
-      render: (value) => <span>{value ? 'Yes' : 'No'}</span>,
+      render: (value) => <span>{value}</span>,
     },
+    
     {
       title: 'Shareholding Pattern',
       dataIndex: 'shareholdingPattern',
