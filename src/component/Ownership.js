@@ -8,6 +8,12 @@ const Ownership = ({ownershipChange2022Value,handleOwnershipChange2022Change,for
       <Form.Item
             label="Was there any change in Ownership Structure in 2022?"
             name="ownershipChange2022"
+               rules={[
+            {
+              required: true,
+              message: 'Please select an option',
+            },
+          ]}
           >
             <Radio.Group className="vertical-radio-group" value={ownershipChange2022Value}
               onChange={(e) => handleOwnershipChange2022Change}
