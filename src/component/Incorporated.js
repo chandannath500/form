@@ -4,10 +4,12 @@ import Upload from './Upload';
 
 const Incorporated = ({ incorporated2022Value, handleIncorporated2022Change, form }) => {
   return (
-    <div>
+    <>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Form.Item
         label="Was the S-Corp incorporated in 2022?"
         name="incorporated2022"
+        labelCol={{ span: 24 }}
         rules={[
             {
               required: true,
@@ -18,14 +20,15 @@ const Incorporated = ({ incorporated2022Value, handleIncorporated2022Change, for
         <Radio.Group
           className="vertical-radio-group"
           value={incorporated2022Value}
-          onChange={handleIncorporated2022Change} // Removed unnecessary arrow function
+          onChange={handleIncorporated2022Change} 
         >
           <Radio value="yes">Yes</Radio>
           <Radio value="no">No</Radio>
         </Radio.Group>
       </Form.Item>
-
-      <Form.Item label="Please Upload the Incorporation Documents" name="incorporationDocuments">
+</div>
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Form.Item label="Please Upload the Incorporation Documents"  labelCol={{ span: 24 }} name="incorporationDocuments">
         <Upload
           main={"Browse Files"}
           sub={"Drag and drop files here"}
@@ -34,6 +37,7 @@ const Incorporated = ({ incorporated2022Value, handleIncorporated2022Change, for
         />
       </Form.Item>
     </div>
+    </>
   );
 };
 
