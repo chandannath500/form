@@ -47,7 +47,7 @@ const FormPage = () => {
 
       const updatedCombinedData = [...combinedData, formattedFormValues];
       setCombinedData(updatedCombinedData);
-      setSubmittedForms([...submittedForms, formattedFormValues]);
+      
 
       localStorage.setItem('submittedForms', JSON.stringify([...submittedForms, formattedFormValues]));
 
@@ -69,9 +69,7 @@ const FormPage = () => {
   };
 
   const handleCancel = () => {
-    form.resetFields();
     setFormVisible(false);
-    setShowCombinedData(false);
   };
 
   const handleFileReturnsLastYearChange = (value) => {
