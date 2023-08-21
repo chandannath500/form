@@ -253,7 +253,7 @@ const FormPage = () => {
           <span>Please complete the payment. We will prepare the draft tax return within 48 hours!</span>
           <div>
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', marginBottom: '10px', marginTop: '20px' }}>
-              <Checkbox onChange={handleEasyTaxCheckbox} checked={applyEasyTax} style={{ border: '1px solid black', borderRadius: 0 }}></Checkbox>
+              <Checkbox onChange={handleEasyTaxCheckbox} checked={applyEasyTax} ></Checkbox>
               <img src={logo} alt="EasyTax Logo" style={{ width: '40px', height: '50px', marginRight: '10px', marginTop: '-10px', marginLeft: '10px' }} />
               <h2 style={{ margin: 0 }}>EasyTaxes</h2>
               <span style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end', marginLeft: 'auto' }}>
